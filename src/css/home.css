@@ -189,10 +189,10 @@ img{
 /*=== Login dropdown ===*/
 .container-login{
     top: var(--header-height);
-    right: 4rem;
+    right: 5rem;
     position: absolute;
     z-index: 999;
-    opacity: 1;
+    opacity: 0;
     transition: .2s;
  }
  .drop-down__login{
@@ -283,7 +283,7 @@ img{
     text-decoration: underline;
  }
 .hide{
-    opacity: 0;
+    opacity: 1;
  }
 /*============= Sections Class =============*/
 .section__showcase{
