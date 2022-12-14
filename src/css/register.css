@@ -1,0 +1,74 @@
+
+.bg-image{
+    height: 100vh;
+    background-image: url(../img/pexels-jens-mahnke-1153838.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -100;  
+    opacity: .8;
+}
+.container-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.register{
+    height: 20em;
+    width: 30em;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+}
+.form-content header{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-field input{
+    height: 1.2rem;
+    padding: 0 8px;
+    margin-top: 5px;
+}
+
+.button-field button{
+    height: 2rem;
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border-radius: 5px;   
+}
+
+.message-status{
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    background-color: aliceblue;
+}
+.message-status h1{
+    padding: 5px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 425px) {
+    .register{
+        width: 16em;
+    }
+}
