@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +9,164 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--CSS-->
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/var.css">
-    <link rel="stylesheet" href="./src/css/home.css">
-    <link rel="stylesheet" href="./src/css/header_footer.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/var.css">
+    <link rel="stylesheet" href="../css/product_details.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
     <!--Script-->
-    <script src="./src/js/header.js" defer></script>
+    <script src="../js/header.js" defer></script>
     <!--Title-->
-    <title>Shop Shoes - product</title>
+    <title>Shop Shoes - Product Details</title>
 </head>
 <body>
+    <header class="main__header">
+        <a href="#" class="logo">Shop Shoes</a>
+        <nav class="menu-hd">
+            <div class="nav nav__menu" id="nav-menu">
+                <ul class="nav nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Featured</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Men</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Woman</a></li>
+                </ul>
     
+                <div class="icon icon-account">
+                    <i class='bx bx-user'></i>
+                </div>
+    
+                <div class="icon icon-cart">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+        </nav>
+        <section class="container-login">
+            <div class="drop-down__login">
+                <div class="form login">
+                    <div class="form-content">
+                        <header>Login</header>
+                        <form action="#">
+                            <div class="field input-field">
+                                <input type="email" placeholder="Email" class="input">
+                            </div>
+                            <div class="field input-field">
+                                <input id="password" type="password" placeholder="Password" class="password">
+                                <span class="hide-password"><i class='bx bx-hide eye-icon'></i></span>
+                            </div>
+                            <div class="form-link">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            <div class="button-field">
+                                <button>Login</button>
+                            </div>
+                            <div class="form-link">
+                                <span>Already have an account? <a href="./src/pages/register.html" class="signup-link">Signup</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        
+        <section class="product">
+            <section class="product__info">
+            
+                <div class="product__view">
+                    <img src="../img/air-force-air-jordan-sneakers-michael-jordan.png" alt="">
+                </div>
+
+                <div class="base__info">
+                    <h1 class="p-name">Nike Jordan gold/black</h1>
+                    <p class="p-price">R$ 1.500,00</p>
+                    <p class="p-portion">12x R$ 130,00</p>
+                    <div class="select">
+                        <div class="select__color">
+                            <p>Cores:</p>
+                            <select name="Color" id="color-product">
+                                <option value="W/B">branco/preto</option>
+                                <option value="B/U">preto/azul</option>
+                            </select>
+                        </div>
+                        <div class="select__number">
+                            <p>Numero:</p>
+                            <select name="Color" id="color-product">
+                                <option value="num-37">37</option>
+                                <option value="num-38">38</option>
+                                <option value="num-39">39</option>
+                                <option value="num-40">40</option>
+                                <option value="num-41">41</option>
+                                <option value="num-42">42</option>
+                                <option value="num-43">43</option>
+                                <option value="num-44">44</option>
+                                <option value="num-45">45</option>
+                                <option value="num-46">46</option>
+                                <option value="num-47">47</option>
+                                <option value="num-48">48</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product__description">
+                    <h1>Descrição:</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime nisi quisquam, provident animi repellat autem dolorum ipsa incidunt ipsum quas necessitatibus perferendis aliquam magnam, eaque corporis amet expedita explicabo!</p>
+                    </div>
+                    <div class="add-cart"><i class='bx bx-cart-add'></i>Add to Cart </div>
+                </div>
+                
+            </section>
+            <section class="container__details">
+                <div class="datasheet">
+                    <hr>
+                    <h1>Caracteristicas do Produto: </h1>
+                    <table>
+                        <tr>
+                            <td class="attribute">Tipo:</td>
+                            <td class="value">Basketball</td>
+                        </tr>
+                        <tr>
+                            <td class="attribute">Modelo:</td>
+                            <td class="value">Air Jordan</td>
+                        </tr>
+                        <tr>
+                            <td class="attribute">Marca:</td>
+                            <td class="value">Nike</td>
+                        </tr>
+                        <tr>
+                            <td class="attribute">Numeração:</td>
+                            <td class="value">37 ao 48</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="main__footer">
+        <div class="brand">
+            <p class="logo-footer">Shop Shoes</p>
+            <a href="#">Police Privacy</a>
+            <p>Copyright &#169 2022 Shop Shoes</p>
+    
+        </div>
+        <div class="footer__contact">
+            <div class="footer__icon">
+                <i class='bx bxl-gmail'></i>
+            </div>
+            <div class="footer__icon">
+                <i class='bx bxl-whatsapp' ></i>
+            </div>
+            <div class="footer__icon">
+                <i class='bx bxl-instagram' ></i>
+            </div>
+    
+        </div>
+        <div class="footer__info">
+            <h2>Contato</h2>
+            <p>Florianópolis - SC</p>
+            <p><strong>Email:</strong>xxxxxxxx@gmail.com</p>
+            <p><strong>Numero:</strong>(48) 99999-9999</p>
+        </div>
+    
+    </footer>
 </body>
 </html>

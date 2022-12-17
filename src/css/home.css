@@ -1,6 +1,7 @@
 /*================== Global =============*/
 html{
     scroll-behavior: smooth;
+    width: 100vw;
 }
 body{
     font-family: var(--body-font);
@@ -14,7 +15,9 @@ img{
     display: block;
     height: auto;
 }
-
+.main__content{
+    width: 100vw;
+}
 /*======== Home ==========*/
 .home{
     margin-top: 6.5em;
@@ -116,105 +119,7 @@ img{
         width: 15rem;
     }
 }
-/*=== Login dropdown ===*/
-.container-login{
-    top: var(--header-height);
-    right: 5rem;
-    position: absolute;
-    z-index: 999;
-    opacity: 0;
-    transition: .2s;
- }
- .drop-down__login{
-    border: black 2px solid;
-    height: 20rem;
-    width: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 6px;
- }
- .form{
-    width: 80%;
- }
- .form-content header{
-    font-size: var(--bigger-font-size);
-    font-weight: var(--font-semi-bold);
-    color: black;
-    text-align: center;
- }
- form{
-    margin-top: 2rem;
- }
- form .field{
-    position: relative;
-    height: 2.3rem;
-    width: 90%;
- }
- .field input,.field button{
-    height: 100%;
-    width: 100%;
-    border: none;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-    border-radius: 5px;
- }
- .field:nth-child(2){
-    margin-top: 1.5rem;
- }
- .field input{
-    padding: 0 8px;
-    border: 1px solid #cacaca;
- }
- .hide-password{
-    position: absolute;
-    top: 50%;
-    right: 2px;
-    transform: translateY(-50%);
-    cursor: pointer;
- }
- .eye-icon{
-    font-size: var(--small-font-size); 
-    color: #8b8b8b;
- }
- .button-field{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- .button-field button{
-    height: 2rem;
-    padding: 0 4rem;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    font-weight: var(--font-bold);
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: .5s;
- }
- .button-field button:hover{
-    background-color: var(--color-grey-100);
-    color: var(--color-grey-1000);
- }
- .form-link{
-    text-align: center;
-    margin-top: 1.2rem;
- }
- .form-link a{
-    color: blueviolet;
- }
- .form-link a,.form-link span{
-    font-size: var(--small-font-size);
- }
- .form a:hover{
-    text-decoration: underline;
- }
-.hide{
-    opacity: 1;
- }
+
 /*============= Sections Class =============*/
 .section__showcase{
     width: 100vw;
