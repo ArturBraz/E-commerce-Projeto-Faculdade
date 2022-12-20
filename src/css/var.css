@@ -34,3 +34,20 @@
     /*===== Z-index ====*/
     --z-fixed: 100;
 }
+/*================== Global =============*/
+html{
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: black;
+    background-color: var(--color-grey-900);
+}
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
