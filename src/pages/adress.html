@@ -16,14 +16,13 @@
   <link rel="stylesheet" href="../css/header_footer.css">
   <!--Script-->
   <script src="../js/header.js" defer></script>
+  <script src="../js/api_via_cep.js" defer></script>
   <!--Title-->
-  <title>Shop Shoes - Product Details</title>
+  <title>Shop Shoes - Delivery </title>
 
 <body>
   <header class="main__header">
-
-    <a href="#" class="logo">Shop Shoes</a>
-
+    <a href="/index.html" class="logo">Shop Shoes</a>
     <nav class="menu-hd">
       <div class="nav nav__menu" id="nav-menu">
         <ul class="nav nav__list">
@@ -40,10 +39,8 @@
         <div class="icon icon-cart">
           <i class='bx bx-shopping-bag'></i>
         </div>
-      </div>
     </nav>
-
-    <section class="container-login">
+    <section class="container-login hide">
       <div class="drop-down__login">
         <div class="form login">
           <div class="form-content">
@@ -70,32 +67,113 @@
         </div>
       </div>
     </section>
-
+    <section class="cart-frame hide">
+      <div class="cart-container">
+        <div class="container__scroll">
+          <div class="item__cart">
+            <div class="miniImage">
+              <img src="../img/air-force-air-jordan-sneakers-michael-jordan.png" alt="">
+            </div>
+            <p class="product-name-cart">Air Force Jordan</p>
+            <p class="price">R$ 890,00</p>
+            <div class="btn-Remove"></div>
+          </div>
+        </div>
+        <a href="#" id="goPay">Finish Buy</a>
+      </div>
+    </section>
   </header>
 
   <main>
-      <div id="order-form-container">
-        <section class="steps">
-          <div class="line"></div>
-          <div class="step cart">
-            <i class='bx bx-cart active' ></i>
-            <p class="step-name">Carrinho</p>
+    <div id="order-form-container">
+      <section class="steps">
+        <div class="line"></div>
+        <div class="step cart">
+          <i class='bx bx-cart active'></i>
+          <p class="step-name">Carrinho</p>
+        </div>
+        <div class="step location">
+          <i class='bx bx-been-here active'></i>
+          <p class="step-name">Endereço</p>
+        </div>
+        <div class="step payment">
+          <i class='bx bx-credit-card'></i>
+          <p class="step-name">Pagamento</p>
+        </div>
+      </section>
+      <hr id="hr-steps">
+      <section class="delivery">
+        
+        <form id="adress-form" action="">
+          <h1 id="title-delivery">Local da entrega</h1>
+          <div id="message" >
+            <p></p>
           </div>
-          <div class="step location">
-            <i class='bx bx-been-here active' ></i>
-            <p class="step-name">Endereço</p>
-          </div>
-          <div class="step payment">
-            <i class='bx bx-credit-card'></i>
-            <p class="step-name">Pagamento</p>
-          </div>
-        </section>
-        <hr id="hr-steps">
-        <section class="all-cart-products">
+          <div class="line-1">
+            <label for="cep">Digite o seu CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="Digite o seu CEP" minlength="8" maxlength="8" required>
 
-        </section>
-       
-      </div>
+          </div>
+
+          <div class="line-2">
+            <label for="adress">Rua</label>
+            <input type="text" name="adress" id="adress" placeholder="Rua"  required data-input>
+
+            <label for="number">Numero da residência</label>
+            <input type="text" name="number" id="number" placeholder="Numero"  required data-input>
+          </div>
+
+          <div class="line-3">
+            <label for="complement">Complemento</label>
+            <input type="text" name="complement" id="complement" placeholder="Complemento"  data-input>
+
+            <label for="neighborhood">Bairro</label>
+            <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro" required data-input>
+          </div>
+
+          <div class="line-4">
+            <label for="city">Cidade</label>
+            <input type="text" name="city" id="city" placeholder="Cidade" required  data-input>
+
+            <label for="">Estado</label>
+            <select name="region" id="region" required data-input>
+              <option selected>Estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+          <div class="line-5">
+            <button id="save-btn" type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
   </main>
 
   <footer class="main__footer">
@@ -126,7 +204,7 @@
       <p><strong>Email:</strong>xxxxxxxx@gmail.com</p>
       <p><strong>Numero:</strong>(48) 99999-9999</p>
     </div>
-    
+
   </footer>
 </body>
 

@@ -1,19 +1,12 @@
 
 function loadCards(products){
-    const featuredCard = document.querySelector('.featured-card');
-    const manCard = document.querySelector('.man-card');
-    const womanCard = document.querySelector('.woman-card')
+    const prodCard = document.querySelector('.all-prod');
 
-    products.forEach(obj => {
+    products.forEach (obj => {
         const card = generateCard(obj);
 
-        if(obj.category === 'featured'){
-            featuredCard.appendChild(card)
-        }else if(obj.category === 'man'){
-            manCard.appendChild(card)
-        }else{
-            womanCard.appendChild(card)
-        }
+        prodCard.appendChild(card);
+
     });
 }
 
@@ -26,9 +19,11 @@ function generateCard(obj){
     const productImg = document.createElement('div')
 
     const viewMore = document.createElement('a')
+    viewMore.setAttribute("href", "./src/pages/product.html")
     const btnView = document.createElement('div')
 
     const redirectDetails = document.createElement('p')
+    redirectDetails.innerText = `View more`
     const image = document.createElement('img')
 
     const productName = document.createElement('h1')
@@ -68,7 +63,7 @@ function generateCard(obj){
     portionValue.classList.add('portion')
 
     btnAddCart.classList.add('btn-add-cart')
-    iconCart.classList.add('bx bx-cart-add')
+    iconCart.classList.add('bx','bx-cart-add')
 
     //atribuindo os valores do database para os elementos
     btnAddCart.dataset.id = obj.id
@@ -80,3 +75,5 @@ function generateCard(obj){
 
     return productCard
 }
+
+loadCards(data);

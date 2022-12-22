@@ -17,13 +17,11 @@
   <!--Script-->
   <script src="../js/header.js" defer></script>
   <!--Title-->
-  <title>Shop Shoes - Product Details</title>
+  <title>Shop Shoes - Cart Products</title>
 
 <body>
   <header class="main__header">
-
-    <a href="#" class="logo">Shop Shoes</a>
-
+    <a href="/index.html" class="logo">Shop Shoes</a>
     <nav class="menu-hd">
       <div class="nav nav__menu" id="nav-menu">
         <ul class="nav nav__list">
@@ -40,10 +38,8 @@
         <div class="icon icon-cart">
           <i class='bx bx-shopping-bag'></i>
         </div>
-      </div>
     </nav>
-
-    <section class="container-login">
+    <section class="container-login hide">
       <div class="drop-down__login">
         <div class="form login">
           <div class="form-content">
@@ -70,44 +66,63 @@
         </div>
       </div>
     </section>
-
+    <section class="cart-frame hide">
+      <div class="cart-container">
+        <div class="container__scroll">
+          <div class="item__cart">
+            <div class="miniImage">
+              <img src="../img/air-force-air-jordan-sneakers-michael-jordan.png" alt="">
+            </div>
+            <p class="product-name-cart">Air Force Jordan</p>
+            <p class="price">R$ 890,00</p>
+            <div class="btn-Remove"></div>
+          </div>
+        </div>
+        <a href="#" id="goPay">Finish Buy</a>
+      </div>
+    </section>
   </header>
 
   <main>
-      <div id="order-form-container">
-        <section class="steps">
-          <div class="line"></div>
-          <div class="step cart">
-            <i class='bx bx-cart active' ></i>
-            <p class="step-name">Carrinho</p>
+    <div id="order-form-container">
+      <section class="steps">
+        <div class="line"></div>
+        <div class="step cart">
+          <i class='bx bx-cart active'></i>
+          <p class="step-name">Carrinho</p>
+        </div>
+        <div class="step location">
+          <i class='bx bx-been-here'></i>
+          <p class="step-name">Endereço</p>
+        </div>
+        <div class="step payment">
+          <i class='bx bx-credit-card'></i>
+          <p class="step-name">Pagamento</p>
+        </div>
+      </section>
+      <hr id="hr-steps">
+      <section class="all-cart-products">
+        <div class="product__shop">
+          <div class="c-image">
+            <img src="../img/air-force-air-jordan-sneakers-michael-jordan.png" alt="">
           </div>
-          <div class="step location">
-            <i class='bx bx-been-here' ></i>
-            <p class="step-name">Endereço</p>
+          <div class="details">
+            <p>Name: Air Jordan</p>
+            <p>Color: Black/White</p>
+            <p>Number: 47</p>
           </div>
-          <div class="step payment">
-            <i class='bx bx-credit-card'></i>
-            <p class="step-name">Pagamento</p>
-          </div>
-        </section>
-        <hr id="hr-steps">
-        <section class="all-cart-products">
-          <div class="product__shop">
-            <div>
-              <img src="" alt="">
-            </div>
-            <div class="details">
-
-            </div>
-            <div class="container__remove">
-              <div class="cart-remove">
-
+          <div class="container__remove">
+            <div class="cart-remove">
+              <div class="btn-remove-cart">
+                <i class='bx bx-x'></i>
               </div>
             </div>
           </div>
-        </section>
-       
-      </div>
+        </div>
+      </section>
+      <p class="total-value">Valor Total: R$ 890,00</p>
+      <a class="next-step" href="./adress.html">Proxima etapa</a>
+    </div>
   </main>
 
   <footer class="main__footer">
@@ -138,7 +153,7 @@
       <p><strong>Email:</strong>xxxxxxxx@gmail.com</p>
       <p><strong>Numero:</strong>(48) 99999-9999</p>
     </div>
-    
+
   </footer>
 </body>
 

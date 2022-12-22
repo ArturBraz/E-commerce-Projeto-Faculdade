@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -15,196 +16,155 @@
     <link rel="stylesheet" href="./src/css/header_footer.css">
     <!--Script-->
     <script src="./src/js/header.js" defer></script>
+    <script src="./src/js/db_product.js" defer></script>
     <script src="./src/js/product-cards.js" defer></script>
     <!--Title-->
     <title>Shop Shoes</title>
 
 </head>
+
 <body>
-   <header class="main__header">
-    <a href="#" class="logo">Shop Shoes</a>
-    <nav class="menu-hd">
-        <div class="nav nav__menu" id="nav-menu">
-            <ul class="nav nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Featured</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Men</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Woman</a></li>
-            </ul>
+    <header class="main__header">
+        <a href="/index.html" class="logo">Shop Shoes</a>
+        <nav class="menu-hd">
+            <div class="nav nav__menu" id="nav-menu">
+                <ul class="nav nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#featured-sec" class="nav__link">Products</a></li>
+                    
+                </ul>
 
-            <div class="icon icon-account">
-                <i class='bx bx-user'></i>
-            </div>
+                <div class="icon icon-account">
+                    <i class='bx bx-user'></i>
+                </div>
 
-            <div class="icon icon-cart">
-                <i class='bx bx-shopping-bag' ></i>
-            </div>
-    </nav>
-    <section class="container-login">
-        <div class="drop-down__login">
-            <div class="form login">
-                <div class="form-content">
-                    <header>Login</header>
-                    <form action="#">
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
-                        </div>
-                        <div class="field input-field">
-                            <input id="password" type="password" placeholder="Password" class="password">
-                            <span class="hide-password"><i class='bx bx-hide eye-icon'></i></span>
-                        </div>
-                        <div class="form-link">
-                            <a href="#" class="forgot-password">Forgot password?</a>
-                        </div>
-                        <div class="button-field">
-                            <button>Login</button>
-                        </div>
-                        <div class="form-link">
-                            <span>Already have an account? <a href="./src/pages/register.html" class="signup-link">Signup</a></span>
-                        </div>
-                    </form>
+                <div class="icon icon-cart">
+                    <i class='bx bx-shopping-bag'></i>
+                </div>
+        </nav>
+        <section class="container-login hide">
+            <div class="drop-down__login">
+                <div class="form login">
+                    <div class="form-content">
+                        <header>Login</header>
+                        <form action="#">
+                            <div class="field input-field">
+                                <input type="email" placeholder="Email" class="input">
+                            </div>
+                            <div class="field input-field">
+                                <input id="password" type="password" placeholder="Password" class="password">
+                                <span class="hide-password"><i class='bx bx-hide eye-icon'></i></span>
+                            </div>
+                            <div class="form-link">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            <div class="button-field">
+                                <button>Login</button>
+                            </div>
+                            <div class="form-link">
+                                <span>Already have an account? <a href="./src/pages/register.html"
+                                        class="signup-link">Signup</a></span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-   </header>
+        </section>
 
-   <main class="main__content">
-    <section class="home" id="home">
-        <div class="home__container">
-            <div class="home__sneaker">
-                <!-- <div class="home__shape"></div> -->
-
-                <div class="container__image"><img src="./src/img/air-force-air-jordan-sneakers-michael-jordan.png" alt="" class="home__img"></div>
-            </div>
-
-            <div class="home__data">
-                <span class="home__new">New in</span>
-                <h1 class="home__title">Air Force <br> Jordan sneakers</h1>
-                <p class="home__description">Explore the new collections of sneakers</p>
-                <a href="#" class="button" id="btn-explore">Explore now</a>
-            </div>
-        </div>
-    </section>
-    <section class="section__showcase featured">
-        <div class="container">
-            <h1 class="title-showcase">Featured</h1>
-            <div class="container__showcase featured-card">
-                
-                <div class="product__card">
-                    <div class="product__img">
-                        <a href="./src/pages/product.html" class="view__more">
-                            <div class="btn-view">
-                                <p>View More &#8594</p>
-                            </div>
-                        </a>
-                        <img src="./src/img/Men/air-jordan-nike-air-max-basketball-shoe-fly-coin.png" alt="">
-                    </div>
-                    <h1 class="product-name">Nike Jordan white gold</h1>
-                    <div class="product__info">
-                        <div class="price__container">
-                            <h2 class="price">R$ 1.500,00</h2>
-                            <h3 class="portion">12x R$ 130,00</h3>
+        <section class="cart-frame hide">
+            <div class="cart-container">
+                <div class="container__scroll">
+                    <div class="item__cart">
+                        <div class="miniImage">
+                            <img src="./src/img/air-force-air-jordan-sneakers-michael-jordan.png" alt="">
                         </div>
-                        <div class="btn-add-cart">
-                            <i class='bx bx-cart-add'></i>
-                        </div>
+                        <p class="product-name-cart">Air Force Jordan</p>
+                        <p class="price">R$ 890,00</p>
+                        <div class="btn-Remove"></div>
                     </div>
                 </div>
-              
+                <a href="./src/pages/cart.html" id="goPay">Finish Buy</a>
             </div>
-        </div>
-    </section>
-    <section class="section__showcase man">
-        <div class="container">
-            <h1 class="title-showcase">Man</h1>
-            <div class="container__showcase man-card">
-                <div class="product__card">
-                    <div class="product__img">
-                        <div class="view__more">
-                            <div class="btn-view">
-                                <p>View More &#8594</p>
-                            </div>
+        </section>
+    </header>
+
+    <main class="main__content">
+        <section class="home" id="home">
+            <div class="home__container">
+                <div class="home__sneaker">
+
+                    <div class="container__image"><img src="./src/img/air-force-air-jordan-sneakers-michael-jordan.png"
+                            alt="" class="home__img"></div>
+                </div>
+
+                <div class="home__data">
+                    <span class="home__new">New in</span>
+                    <h1 class="home__title">Air Force <br> Jordan sneakers</h1>
+                    <p class="home__description">Explore the new collections of sneakers</p>
+                    <a href="#" class="button" id="btn-explore">Explore now</a>
+                </div>
+            </div>
+        </section>
+        <section id="featured-sec" class="section__showcase featured">
+            <div class="container">
+                <h1 class="title-showcase">Products</h1>
+                <div class="container__showcase all-prod">
+
+                    <!-- <div class="product__card">
+                        <div class="product__img">
+                            <a href="./src/pages/product.html" class="view__more">
+                                <div class="btn-view">
+                                    <p>View More &#8594</p>
+                                </div>
+                            </a>
+                            <img src="./src/img/Men/air-jordan-nike-air-max-basketball-shoe-fly-coin.png" alt="">
                         </div>
-                        <img src="./src/img/Men/air-jordan-nike-air-max-basketball-shoe-fly-coin.png" alt="">
-                    </div>
-                    <div class="product__header">
                         <h1 class="product-name">Nike Jordan white gold</h1>
-                    </div>
-                    <div class="product__info">
-                        <div class="price__container">
-                            <h2 class="price">R$ 1.500,00</h2>
-                            <h3 class="portion">12x R$ 130,00</h3>
-                        </div>
-                        <div class="btn-add-cart">
-                            <i class='bx bx-cart-add'></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section class="section__showcase woman">
-        <div class="container">
-            <h1 class="title-showcase">Woman</h1>
-            <div class="container__showcase woman-card">
-                <div class="product__card">
-                    <div class="product__img">
-                        <div class="view__more">
-                            <div class="btn-view">
-                                <p>View More &#8594</p>
+                        <div class="product__info">
+                            <div class="price__container">
+                                <h2 class="price">R$ 1.500,00</h2>
+                                <h3 class="portion">12x R$ 130,00</h3>
+                            </div>
+                            <div class="btn-add-cart">
+                                <i class='bx bx-cart-add'></i>
                             </div>
                         </div>
-                        <img src="./src/img/Men/air-jordan-nike-air-max-basketball-shoe-fly-coin.png" alt="">
-                    </div>
-                    <div class="product__header">
-                        <h1 class="product-name">Nike Jordan white gold</h1>
-                    </div>
-                    <div class="product__info">
-                        <div class="price__container">
-                            <h2 class="price">R$ 1.500,00</h2>
-                            <h3 class="portion">12x R$ 130,00</h3>
-                        </div>
-                        <div class="btn-add-cart">
-                            <i class='bx bx-cart-add'></i>
-                        </div>
-                    </div>
+                    </div> -->
+                    <a href="./src/pages/product.html"></a>
                 </div>
-
             </div>
+        </section>
+
+    </main>
+
+    <footer class="main__footer">
+        <div class="brand">
+            <p class="logo-footer">Shop Shoes</p>
+            <a href="#">Police Privacy</a>
+            <p>Copyright &#169 2022 Shop Shoes</p>
+
         </div>
-    </section>
+        <div class="footer__contact">
+            <div class="footer__icon">
+                <i class='bx bxl-gmail'></i>
+            </div>
+            <div class="footer__icon">
+                <i class='bx bxl-whatsapp'></i>
+            </div>
+            <div class="footer__icon">
+                <i class='bx bxl-instagram'></i>
+            </div>
 
-   </main>
-
-   <footer class="main__footer">
-    <div class="brand">
-        <p class="logo-footer">Shop Shoes</p>
-        <a href="#">Police Privacy</a>
-        <p>Copyright &#169 2022 Shop Shoes</p>
-
-    </div>
-    <div class="footer__contact">
-        <div class="footer__icon">
-            <i class='bx bxl-gmail'></i>
         </div>
-        <div class="footer__icon">
-            <i class='bx bxl-whatsapp' ></i>
-        </div>
-        <div class="footer__icon">
-            <i class='bx bxl-instagram' ></i>
+        <div class="footer__info">
+            <h2>Contato</h2>
+            <p>Florianópolis - SC</p>
+            <p><strong>Email:</strong>xxxxxxxx@gmail.com</p>
+            <p><strong>Numero:</strong>(48) 99999-9999</p>
         </div>
 
-    </div>
-    <div class="footer__info">
-        <h2>Contato</h2>
-        <p>Florianópolis - SC</p>
-        <p><strong>Email:</strong>xxxxxxxx@gmail.com</p>
-        <p><strong>Numero:</strong>(48) 99999-9999</p>
-    </div>
+    </footer>
 
-   </footer>
-    
 </body>
+
 </html>

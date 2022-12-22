@@ -102,10 +102,13 @@
         width: 15rem;
     }
 }
-
 /*============= Sections Class =============*/
+.container__showcase{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .section__showcase{
-    
     padding: 4rem;
     margin-bottom: 3rem;
 }
@@ -125,7 +128,10 @@
 }
 /*=== Product Card ===*/
 .product__card{
+    display: flex;
+    flex-direction: column;
     width: 15rem;
+    height: 20rem;
     background-color: var(--color-grey-700);
     padding: 5px 10px;
     border-radius: 5px;
@@ -135,6 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
 }
 .view__more{
     position: absolute;
